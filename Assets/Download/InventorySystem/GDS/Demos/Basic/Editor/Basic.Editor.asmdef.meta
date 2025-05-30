@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 526e9cc2b68181648857bc31e397ccde
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/Editor/Basic.Editor.asmdef
+  uploadId: 754060

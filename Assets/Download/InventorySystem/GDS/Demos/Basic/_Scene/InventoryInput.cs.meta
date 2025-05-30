@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 56f33df3e2dd90d478e91b337461c60a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/InventoryInput.cs
+  uploadId: 754060

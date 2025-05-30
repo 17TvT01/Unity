@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 990463d7a9feb0541929f904ce8cc651
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/WorldItemEvents.cs
+  uploadId: 754060

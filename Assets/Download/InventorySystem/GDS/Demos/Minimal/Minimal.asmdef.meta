@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c50d7996509871842ba2dc2a442b1438
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Minimal/Minimal.asmdef
+  uploadId: 754060

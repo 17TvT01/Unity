@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ec164d4658be9eb49aedb19f2860b0f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/Inventory/CharacterSheet.cs
+  uploadId: 754060

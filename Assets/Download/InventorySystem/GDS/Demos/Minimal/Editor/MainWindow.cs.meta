@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c02de47af7b5c304bb7b53c7b89bf306
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Minimal/Editor/MainWindow.cs
+  uploadId: 754060

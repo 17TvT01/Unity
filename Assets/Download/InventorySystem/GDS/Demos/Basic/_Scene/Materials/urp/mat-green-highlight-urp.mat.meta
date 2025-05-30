@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef7fd527c7c91ef4ebf8204e21c714f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/Materials/urp/mat-green-highlight-urp.mat
+  uploadId: 754060

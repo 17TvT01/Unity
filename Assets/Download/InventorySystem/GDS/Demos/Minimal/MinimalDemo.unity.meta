@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4276f3ebeeac5cf4ca09807aca28a572
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Minimal/MinimalDemo.unity
+  uploadId: 754060

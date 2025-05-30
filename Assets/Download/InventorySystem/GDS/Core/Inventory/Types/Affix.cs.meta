@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d54a6a8faa191748a78b4d1b8b6d808
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Core/Inventory/Types/Affix.cs
+  uploadId: 754060

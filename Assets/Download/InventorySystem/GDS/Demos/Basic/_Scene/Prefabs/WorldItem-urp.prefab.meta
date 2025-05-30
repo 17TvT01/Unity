@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc3b6c012bfd39f4f9aa1326ab1fe54b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/Prefabs/WorldItem-urp.prefab
+  uploadId: 754060

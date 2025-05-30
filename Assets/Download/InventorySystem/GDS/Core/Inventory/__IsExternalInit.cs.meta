@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 87c8c2d9beddbf643b900377bca8295d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Core/Inventory/__IsExternalInit.cs
+  uploadId: 754060

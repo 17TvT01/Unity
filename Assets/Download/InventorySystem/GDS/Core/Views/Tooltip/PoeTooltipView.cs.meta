@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fe4c84c3b5708fe4f9a620d933d38c37
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Core/Views/Tooltip/PoeTooltipView.cs
+  uploadId: 754060

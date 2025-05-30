@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3baa478208b21b44b84aa4e8e0d6c57d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/Materials/urp/mat-orange-urp.mat
+  uploadId: 754060

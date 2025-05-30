@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: af15db0e86a3b194e8041fd88fd55f8e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/Materials/urp/mat-magenta-urp.mat
+  uploadId: 754060

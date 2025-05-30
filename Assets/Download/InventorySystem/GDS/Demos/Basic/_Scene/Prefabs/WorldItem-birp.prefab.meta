@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79fbf48fca2a0d742a1e50bc2ff4a883
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283656
+  packageName: Extensible Inventory System
+  packageVersion: 1.5
+  assetPath: Assets/InventorySystem/GDS/Demos/Basic/_Scene/Prefabs/WorldItem-birp.prefab
+  uploadId: 754060
