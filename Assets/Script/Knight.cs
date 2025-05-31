@@ -201,4 +201,21 @@ public class Knight : PlayerBase
         base.TakeDamage(amount, attacker);
         invincibilityTimer = invincibilityTime;
     }
+
+    protected override void LevelUp()
+    {
+        level++;
+        previousLevelExp = totalExpRequired;
+        totalExpRequired = CalculateExpRequired(level + 1);
+
+        // Knight: +20 HP, +10 Mana, +2 Attack mỗi cấp
+        resourceManager.health.maxValue += 20f;
+        resourceManager.health.currentValue = resourceManager.health.maxValue;
+        resourceManager.mana.maxValue += 10f;
+        resourceManager.mana.currentValue = resourceManager.mana.maxValue;
+        attackDamage += 2f;
+
+        Debug.Log($"Knight leveled up to {level}! Next level requires {totalExpRequired} total EXP");
+        UpdateExpUI();
+    }
 }

@@ -368,4 +368,21 @@ public class Mage : PlayerBase
         Debug.Log($"[Mage] OnRespawn: Combat states and minions reset");
     }
 
+    protected override void LevelUp()
+    {
+        level++;
+        previousLevelExp = totalExpRequired;
+        totalExpRequired = CalculateExpRequired(level + 1);
+
+        // Mage: +10 HP, +20 Mana, +2 Attack mỗi cấp
+        resourceManager.health.maxValue += 10f;
+        resourceManager.health.currentValue = resourceManager.health.maxValue;
+        resourceManager.mana.maxValue += 20f;
+        resourceManager.mana.currentValue = resourceManager.mana.maxValue;
+        attackDamage += 2f;
+
+        Debug.Log($"Mage leveled up to {level}! Next level requires {totalExpRequired} total EXP");
+        UpdateExpUI();
+    }
+
 }

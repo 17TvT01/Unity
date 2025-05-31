@@ -18,7 +18,7 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
     public int currentExp = 0;
     public int totalExpRequired = 100;  // Tổng exp cần để lên level tiếp theo
     private int baseExpRequired = 100;  // Exp cơ bản cần cho level 1
-    private int previousLevelExp = 0;   // Exp cần cho level trước đó
+    public int previousLevelExp = 0;   // Exp cần cho level trước đó
 
     [Header("Movement")]
     public float baseMoveSpeed { get; protected set; }
@@ -321,7 +321,7 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
         }
     }
 
-    protected void LevelUp()
+    protected virtual void LevelUp()
     {
         level++;
         previousLevelExp = totalExpRequired;
@@ -338,7 +338,7 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
         UpdateExpUI(); // Đảm bảo UI cập nhật cấp mới
     }
 
-    private int CalculateExpRequired(int targetLevel)
+    public int CalculateExpRequired(int targetLevel)
     {
         // Công thức tính exp cần thiết: baseExp * (1.5^(level-1))
         return Mathf.RoundToInt(baseExpRequired * Mathf.Pow(1.5f, targetLevel - 1));
