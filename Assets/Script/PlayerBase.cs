@@ -40,6 +40,9 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
 
     protected GameObject characterBuildPanel;
 
+    public int statPoints = 0;
+    public enum StatType { HP, Mana, Attack }
+
     protected virtual void Awake()
     {
         // Get components
@@ -327,15 +330,21 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
         previousLevelExp = totalExpRequired;
         totalExpRequired = CalculateExpRequired(level + 1);
 
-        // Tăng các chỉ số cơ bản khi lên cấp
+        // Tăng các chỉ số cơ bản khi lên cấp (giữ nguyên cho base, override ở class con)
         resourceManager.health.maxValue += 20f;
         resourceManager.health.currentValue = resourceManager.health.maxValue;
         resourceManager.mana.maxValue += 10f;
         resourceManager.mana.currentValue = resourceManager.mana.maxValue;
         baseMoveSpeed += 0.5f;
 
+        // Cộng 1 điểm stat mỗi cấp, thêm 1 điểm nữa mỗi 10 cấp
+        statPoints++;
+        if (level % 10 == 0) statPoints++;
+
         Debug.Log($"Player leveled up to {level}! Next level requires {totalExpRequired} total EXP");
-        UpdateExpUI(); // Đảm bảo UI cập nhật cấp mới
+        UpdateExpUI();
+        var buildPanel = GameObject.FindObjectOfType<CharacterBuildPanel>();
+        if (buildPanel != null) buildPanel.UpdatePanel();
     }
 
     public int CalculateExpRequired(int targetLevel)
@@ -360,5 +369,27 @@ public abstract class PlayerBase : MonoBehaviour, ISpawnable
                          $"(Total: {currentExp}/{totalExpRequired})");
             }
         }
+    }
+
+    public void AddStatPoint(StatType type)
+    {
+        if (statPoints <= 0) return;
+        switch (type)
+        {
+            case StatType.HP:
+                resourceManager.health.maxValue += 10f;
+                resourceManager.health.currentValue = resourceManager.health.maxValue;
+                break;
+            case StatType.Mana:
+                resourceManager.mana.maxValue += 10f;
+                resourceManager.mana.currentValue = resourceManager.mana.maxValue;
+                break;
+            case StatType.Attack:
+                attackDamage += 1f;
+                break;
+        }
+        statPoints--;
+        UpdateHealthAndManaUI();
+        UpdateExpUI();
     }
 }
