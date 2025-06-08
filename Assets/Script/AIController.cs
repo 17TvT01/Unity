@@ -20,7 +20,6 @@ public class AIController : MonoBehaviour
             return forcedTarget;
         }
 
-        // Default targeting logic here
         return null;
     }
 

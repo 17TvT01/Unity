@@ -29,12 +29,22 @@ public class CharacterBuildPanel : MonoBehaviour
         UpdatePanel();
     }
 
+    void OnEnable()
+    {
+        // Luôn lấy lại player đang active khi panel được bật
+        if (player == null || !player.gameObject.activeInHierarchy)
+        {
+            player = FindObjectOfType<PlayerBase>();
+        }
+        UpdatePanel();
+    }
+
     public void UpdatePanel()
     {
         if (player == null) return;
         statPointsText.text = $"Stat Points: {player.statPoints}";
-        hpValueText.text = $"HP: {player.MaxHealth}";
-        manaValueText.text = $"Mana: {player.MaxMana}";
+        hpValueText.text = $"HP: {player.CurrentHealth} / {player.MaxHealth}";
+        manaValueText.text = $"Mana: {player.CurrentMana} / {player.MaxMana}";
         attackValueText.text = $"Attack: {player.attackDamage}";
         hpButton.interactable = player.statPoints > 0;
         manaButton.interactable = player.statPoints > 0;

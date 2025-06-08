@@ -30,8 +30,8 @@ public class Wolf : HealthBase
     [SerializeField] private float attackDamage = 10f;
     [SerializeField] private float baseDamage = 15f; // Sát thương cơ bản
     [SerializeField] private float nextAttackTime; // Thời điểm có thể tấn công tiếp theo
-    [SerializeField] private Transform attackPoint;  // Add this
-    [SerializeField] private float attackRadius = 0.5f; // Add this
+    [SerializeField] private Transform attackPoint;  
+    [SerializeField] private float attackRadius = 0.5f; 
     [SerializeField] private GameObject hitEffectPrefab; // Prefab hiệu ứng đánh trúng
 
     [Header("AI Settings")]
