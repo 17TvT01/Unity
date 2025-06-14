@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Pathfinding;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -69,6 +70,7 @@ public class Wolf : HealthBase
     public enum WolfRole { Leader, Follower }
     public enum WolfState { Patrolling, Chasing, Retreating, Investigating, ReturnToTerritory }
     public WolfRole Role { get; private set; }
+    [SerializeField] private WolfRole debugRole; // For debugging in Inspector
     private WolfState currentState = WolfState.Patrolling;
     
     // Pack behavior
@@ -156,6 +158,7 @@ public class Wolf : HealthBase
             InitializeTerritory(transform.position, territoryRadius);
         }
         OnStart();
+        StartCoroutine(CheckAndUnstuckOnSpawn()); // Kiểm tra kẹt map khi spawn
     }
 
     private void OnEnable()
@@ -589,12 +592,11 @@ public class Wolf : HealthBase
     private static void UpdateWolfRoles()
     {
         if (allWolves.Count == 0) return;
-
         var aliveWolves = allWolves.Where(w => !w.isDead).OrderBy(w => w.GetInstanceID()).ToList();
-        
         for (int i = 0; i < aliveWolves.Count; i++)
         {
             aliveWolves[i].Role = i == 0 ? WolfRole.Leader : WolfRole.Follower;
+            aliveWolves[i].debugRole = aliveWolves[i].Role; // Hiển thị role trong Inspector
         }
     }
     #endregion
@@ -873,5 +875,22 @@ public class Wolf : HealthBase
                 count++;
         }
         return count;
+    }
+
+    private IEnumerator CheckAndUnstuckOnSpawn()
+    {
+        yield return new WaitForSeconds(0.1f); // Đợi physics update
+        int maxTries = 10;
+        float checkRadius = 0.5f;
+        for (int i = 0; i < maxTries; i++)
+        {
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, checkRadius, obstacleLayer);
+            if (hits.Length == 0) yield break; // Không bị kẹt
+            // Dịch chuyển nhẹ ra ngoài hướng ngẫu nhiên
+            Vector2 offset = Random.insideUnitCircle.normalized * 1.0f;
+            transform.position += (Vector3)offset;
+            yield return null;
+        }
+        Debug.LogWarning($"Wolf {gameObject.name} vẫn bị kẹt sau khi spawn!");
     }
 }
